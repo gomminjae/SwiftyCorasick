@@ -1,6 +1,4 @@
 # SwiftyCorasick
-
-[![CI Status](https://img.shields.io/travis/gomminjae/SwiftyCorasick.svg?style=flat)](https://travis-ci.org/gomminjae/SwiftyCorasick)
 [![Version](https://img.shields.io/cocoapods/v/SwiftyCorasick.svg?style=flat)](https://cocoapods.org/pods/SwiftyCorasick)
 [![License](https://img.shields.io/cocoapods/l/SwiftyCorasick.svg?style=flat)](https://cocoapods.org/pods/SwiftyCorasick)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyCorasick.svg?style=flat)](https://cocoapods.org/pods/SwiftyCorasick)
