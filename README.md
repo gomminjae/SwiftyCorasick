@@ -26,7 +26,7 @@ let package = Package(
     .package(url: "https://github.com/gomminjae/SwiftyCorasick.git")
   ],
   targets: [
-    .target(name: "MyTarget", dependencies: ["SwiftyCora"])
+    .target(name: "MyTarget", dependencies: ["SwiftyCorasick"])
   ]
 )
 ```
