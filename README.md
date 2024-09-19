@@ -10,12 +10,25 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 ## Requirements
 
 ## Installation
-
 SwiftyCorasick is available through [CocoaPods](https://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
+### Podfile
 ```ruby
 pod 'SwiftyCorasick'
+```
+
+### Package.swift 
+```ruby
+let package = Package(
+  name: "MyPackage",
+  dependencies: [
+    .package(url: "https://github.com/gomminjae/SwiftyCorasick.git")
+  ],
+  targets: [
+    .target(name: "MyTarget", dependencies: ["SwiftyCora"])
+  ]
+)
 ```
 
 ## Author
