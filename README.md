@@ -19,7 +19,7 @@ pod 'SwiftyCorasick'
 ```
 
 ### Package.swift 
-```ruby
+```swift
 let package = Package(
   name: "MyPackage",
   dependencies: [
