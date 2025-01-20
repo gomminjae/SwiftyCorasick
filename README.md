@@ -34,18 +34,32 @@ let package = Package(
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+### Basic Example
+
+Below is a simple example of how to use `SwiftyCorasick` to search for patterns in a given text.
+
 ```swift
 import SwiftyCorasick
 
+// Define patterns to search
 let patterns = ["swift", "code", "corasick"]
-let ac = SwiftyCorasick(patterns: patterns)
+let ac = SwiftyCorasick.shared
 
+// Bind patterns to the trie
+ac.bindKeywords(patterns)
+
+// Text to search
 let text = "swift and code with Aho-Corasick algorithm"
-let matches = ac.search(in: text)
 
-for match in matches {
-    print("Pattern: \(match.pattern), Range: \(match.range)")
+// Search for patterns in the text
+ac.processTextAsync(text) { filteredText in
+    print("Filtered Text: \(filteredText)")
 }
+
+```
+### Output 
+``` text
+Filtered Text: "***** and **** with Aho-******** algorithm"
 ```
 
 
