@@ -30,6 +30,24 @@ let package = Package(
   ]
 )
 ```
+## 📖 Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+```swift
+import SwiftyCorasick
+
+let patterns = ["swift", "code", "corasick"]
+let ac = SwiftyCorasick(patterns: patterns)
+
+let text = "swift and code with Aho-Corasick algorithm"
+let matches = ac.search(in: text)
+
+for match in matches {
+    print("Pattern: \(match.pattern), Range: \(match.range)")
+}
+```
+
 
 ## Author
 
