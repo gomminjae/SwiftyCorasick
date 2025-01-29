@@ -15,8 +15,10 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Setup Xcode
-        run: sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
+      - name: Set up Swift 6.0
+        uses: swift-ci/actions/setup-swift@v1
+        with:
+          version: '6.0.0'
 
       - name: Run Tests
         run: swift test
