@@ -3,6 +3,7 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftyCorasick.svg?style=flat)](https://cocoapods.org/pods/SwiftyCorasick)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyCorasick.svg?style=flat)](https://cocoapods.org/pods/SwiftyCorasick)
 ![Swift Tests](https://github.com/gomminjae/SwiftyCorasick/actions/workflows/swift.yml/badge.svg)
+[![CocoaPods](https://img.shields.io/cocoapods/dt/SwiftyCorasick.svg?style=flat)](https://cocoapods.org/pods/SwiftyCorasick)
 
 ## Example
 
