@@ -12,11 +12,10 @@ jobs:
   test:
     runs-on: macos-latest
     steps:
-
       - name: Install Swift 6.0
         run: |
-          curl -sSL https://swift.org/builds/swift-6.0.0-release/xcode/swift-6.0.0-RELEASE-osx.pkg -o swift.pkg
-          sudo installer -pkg swift.pkg -target /
+          curl -sSL https://swift.org/builds/swift-6.0.0-release/xcode/swift-6.0.0-RELEASE-osx.pkg -o /tmp/swift.pkg
+          sudo installer -pkg /tmp/swift.pkg -target /
 
       - name: Install Dependencies
         run: swift package resolve
