@@ -12,13 +12,15 @@ jobs:
   test:
     runs-on: macos-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
 
-      - name: Set up Swift 6.0
-        uses: swift-ci/actions/setup-swift@v1
-        with:
-          version: '6.0.0'
+      - name: Install Swift 6.0
+        run: |
+          sudo softwareupdate --install --all
+          curl -sSL https://swift.org/builds/swift-6.0.0-release/xcode/swift-6.0.0-RELEASE/swift-6.0.0-RELEASE-osx.pkg -o swift.pkg
+          sudo installer -pkg swift.pkg -target /
+
+      - name: Install Dependencies
+        run: swift package resolve
 
       - name: Run Tests
         run: swift test
