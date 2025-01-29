@@ -22,7 +22,7 @@ pod 'SwiftyCorasick'
 ### Package.swift 
 ```swift
 let package = Package(
-  name: "MyPackage",
+  name: "SwiftCorasick",
   dependencies: [
     .package(url: "https://github.com/gomminjae/SwiftyCorasick.git")
   ],
