@@ -3,7 +3,6 @@
 [![License](https://img.shields.io/cocoapods/l/SwiftyCorasick.svg?style=flat)](https://cocoapods.org/pods/SwiftyCorasick)
 [![Platform](https://img.shields.io/cocoapods/p/SwiftyCorasick.svg?style=flat)](https://cocoapods.org/pods/SwiftyCorasick)
 ![Swift Tests](https://github.com/gomminjae/SwiftyCorasick/actions/workflows/swift.yml/badge.svg)
-[![CocoaPods](https://img.shields.io/cocoapods/dt/SwiftyCorasick.svg?style=flat)](https://cocoapods.org/pods/SwiftyCorasick)
 
 ## Example
 
@@ -43,19 +42,11 @@ Below is a simple example of how to use `SwiftyCorasick` to search for patterns 
 ```swift
 import SwiftyCorasick
 
-// Define patterns to search
-let patterns = ["swift", "code", "corasick"]
-let ac = SwiftyCorasick.shared
-
-// Bind patterns to the trie
-ac.bindKeywords(patterns)
-
-// Text to search
-let text = "swift and code with Aho-Corasick algorithm"
-
-// Search for patterns in the text
-ac.processTextAsync(text) { filteredText in
-    print("Filtered Text: \(filteredText)")
+Task {
+    // 비동기 함수 호출
+    let maskedText = await SwiftyCorasick.shared.processTextAsync(testText)
+    // 결과 처리
+    print("Masked Text: \(maskedText)")
 }
 
 ```
