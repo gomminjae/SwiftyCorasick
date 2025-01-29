@@ -19,5 +19,4 @@ jobs:
         run: sudo xcode-select -switch /Applications/Xcode.app/Contents/Developer
 
       - name: Run Tests
-        run: swift test --enable-test-discovery
-
+        run: swift test
