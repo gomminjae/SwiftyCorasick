@@ -15,7 +15,7 @@ jobs:
 
       - name: Install Swift 6.0
         run: |
-          curl -sSL https://swift.org/builds/swift-6.0.0-release/xcode/swift-6.0.0-RELEASE/swift-6.0.0-RELEASE-osx.pkg -o swift.pkg
+          curl -sSL https://swift.org/builds/swift-6.0.0-release/xcode/swift-6.0.0-RELEASE-osx.pkg -o swift.pkg
           sudo installer -pkg swift.pkg -target /
 
       - name: Install Dependencies
